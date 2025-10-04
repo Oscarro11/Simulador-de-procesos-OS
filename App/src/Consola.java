@@ -87,4 +87,26 @@ public class Consola {
         return numero_ingresado;  
     }
 
+    public static void mostrarResultado(String nombre, int numero_original, int tipo, int resultado){
+        String tipo_proceso = "";
+
+        switch (tipo) {
+            case 1:
+                tipo_proceso = "proceso de CPU";
+                break;
+
+            case 2:
+                tipo_proceso = "proceso de IO";
+                break;
+
+            case 3:
+                tipo_proceso = "proceso de Daemon";
+                break;
+        
+            default:
+                break;
+        }
+
+        System.out.println("El " + tipo_proceso + " llamado '" + nombre + "' recibio el numero '" + numero_original + "'', y dio como resultado '" + resultado + "'");
+    }
 }

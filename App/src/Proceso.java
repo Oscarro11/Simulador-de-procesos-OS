@@ -11,6 +11,29 @@ public abstract class Proceso {
 
     protected int operar(int num){return num;};
 
+    public int tipoProceso(Proceso proceso){
+        int tipo_proceso = 0;
+
+        switch (proceso) {
+            case ProcesoCPU procesoCPU:
+                tipo_proceso = 1;
+                break;
+
+            case ProcesoIO procesoIO:
+                tipo_proceso = 2;
+                break;
+
+            case ProcesoDaemon procesoDaemon:
+                tipo_proceso = 3;
+                break;
+        
+            default:
+                break;
+        }
+        
+        return tipo_proceso;
+    }
+
     public String getNombre() {
         return nombre;
     }
