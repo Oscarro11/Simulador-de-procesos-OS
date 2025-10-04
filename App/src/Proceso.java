@@ -34,6 +34,10 @@ public abstract class Proceso {
         return tipo_proceso;
     }
 
+    public String toString(Proceso proceso){
+        return "Nombre: " + nombre + ", Identificador: " + PID + ", Tipo: " + proceso.getClass() + ", Cantidad de cambio: " + variable_cambio;
+    }
+
     public String getNombre() {
         return nombre;
     }

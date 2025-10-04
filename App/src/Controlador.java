@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Controlador {
-    static int cont_PID = 0;
+    static int cont_PID = 1;
 
     public static Proceso crearProceso() {
         Proceso procesoNuevo;
@@ -27,12 +27,13 @@ public class Controlador {
                 procesoNuevo = null;
                 break;
         }
+        cont_PID += 1;
 
         return procesoNuevo;
     }
 
-    public static void ejecutarProcesos(ArrayList<Proceso> lista_procesos) {
-        int num = 0;
+    public static void ejecutarProcesos(ArrayList<Proceso> lista_procesos, int num_inicial) {
+        int num = num_inicial;
         int res = 0;
 
         for (Proceso proceso : lista_procesos) {

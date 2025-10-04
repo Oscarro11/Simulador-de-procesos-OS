@@ -9,6 +9,6 @@ public class ProcesoDaemon extends Proceso{
 
     @Override
     public int operar(int num){
-        return num - RNG.nextInt(0, 20);
+        return num * RNG.nextInt(0, 10);
     }
 }

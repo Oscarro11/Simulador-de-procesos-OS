@@ -29,7 +29,7 @@ public class Consola {
             System.out.println("Ingrese el numero que el nuevo proceso usara en sus calculos: ");
             try {
                 numero_ingresado = teclado.nextInt();
-                teclado.next();
+                teclado.nextLine();
                 numero_valido = true;
             } catch (Exception e) {
                 System.out.println("El numero ingresado no es valido, intentelo de nuevo\n");
@@ -52,7 +52,7 @@ public class Consola {
             try {
                 tipo_ingresado = teclado.nextInt();
                 if (tipo_ingresado == 1 || tipo_ingresado == 2 || tipo_ingresado == 3) {
-                    teclado.next();
+                    teclado.nextLine();
                     numero_valido = true;    
                 }
                 else {
@@ -76,7 +76,7 @@ public class Consola {
             System.out.println("El proceso '" + nombre + "'' necesita que ingrese un numero: ");
             try {
                 numero_ingresado = teclado.nextInt();
-                teclado.next();
+                teclado.nextLine();
                 numero_valido = true;
             } catch (Exception e) {
                 System.out.println("El numero ingresado no es valido, intentelo de nuevo\n");
@@ -107,6 +107,6 @@ public class Consola {
                 break;
         }
 
-        System.out.println("El " + tipo_proceso + " llamado '" + nombre + "' recibio el numero '" + numero_original + "'', y dio como resultado '" + resultado + "'");
+        System.out.println("El " + tipo_proceso + " llamado '" + nombre + "' recibio el numero '" + numero_original + "', y dio como resultado '" + resultado + "'");
     }
 }
